@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Predicted Alphabet: {{ prediction }}</h2>
+        <img src="{{ url_for('static', filename='output/' + filename) }}" alt="Uploaded Image" class="image-preview">
+        <br><br>
+        <a href="{{ url_for('predict') }}" class="button">Try Another</a>
+    </div>
+</body>
+</html>
